@@ -1,0 +1,30 @@
+How to: Voice Recognition on your Raspberry Pi
+
+technology used: 
+Python, Linux-Bash
+
+hardware used: 
+Raspberry Pi B+ , 
+8GB microSD card
+USB Microphone or Webcam, 
+self powered speakers (to hear Jasper’s responses)
+
+Steps:
+Download the Raspbian OS from http://www.raspberrypi.org/downloads/
+Write the image to your microSD and plug it into your Pi.
+Connect the power supply and ethernet cable to your raspberry Pi and boot it up.
+Connect to your Pi through ssh.
+Install Jasper. Follow the instructions under Method 3: Manual Installation at http://jasperproject.github.io/documentation/installation/
+Write your own python modules for your own custom commands.
+start Jasper
+
+My custom modules
+
+Beep.py
+this is a wrapper module that I use to run a bash command, to call a short program i wrote in C/WiringPi that makes a buzzer connected to GPIO pin 26 beep a number of times.
+
+Coffee.py
+in this module I use the Python module “requests” to call the published Web API function on my Spark Core to start brewing coffee.
+
+Christmas.py
+this is a wrapper module that I use to run a bash command, calling omxplayer (command line media player included in Raspbian)  to play TheFirstNoel.mp3 that I copied to my Pi through netatalk.
